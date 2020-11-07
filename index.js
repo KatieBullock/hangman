@@ -16,7 +16,7 @@ const resetGame = () => {
     let numberOfRemainingLetters = word.length;
   
     const findHiddenWordArray = () => {
-      letters.forEach((letter, index) => {
+      letters.forEach((_, index) => {
         hiddenWordArray[index] = "_"
       });
     };
@@ -30,10 +30,8 @@ const resetGame = () => {
       let guess = prompt.question("\nPlease guess a letter: ").toLowerCase();
       if (guess === "") {
         console.log("\nPlease enter a letter.")
-        console.log(`You have ${numberOfGuesses} guesses left.\n`) 
       } else if (/[^a-zA-Z]/.test(guess[0])) {
         console.log("\nPlease enter a letter.")
-        console.log(`You have ${numberOfGuesses} guesses left.\n`) 
       } else if (/[a-zA-Z]/.test(guess[0])) {
         letters.forEach((letter, index) => {
           if (guess[0] === letter) {
@@ -46,42 +44,45 @@ const resetGame = () => {
         if (!alreadyGuessedLetters.includes(guess[0]) && !letters.includes(guess[0])) {
           numberOfGuesses--
         };
+        if (!alreadyGuessedLetters.includes(guess[0])) {
+          alreadyGuessedLetters.push(guess[0]);
+        };
+      };
         if (numberOfGuesses === 6) {
-          console.log(`You have ${numberOfGuesses} guesses left.\n`)
+          console.log(`\nYou have ${numberOfGuesses} guesses left.`)
         } else if (numberOfGuesses === 5) {
           console.log(`\n O \n\n\n`);
-          console.log(`You have ${numberOfGuesses} guesses left.\n`)
+          console.log(`You have ${numberOfGuesses} guesses left.`)
         } else if (numberOfGuesses === 4) {
           console.log(`\n O \n | \n\n`)
-          console.log(`You have ${numberOfGuesses} guesses left.\n`)
+          console.log(`You have ${numberOfGuesses} guesses left.`)
         } else if (numberOfGuesses === 3) {
           console.log(`\n O \n/| \n\n`)
-          console.log(`You have ${numberOfGuesses} guesses left.\n`)
+          console.log(`You have ${numberOfGuesses} guesses left.`)
         } else if (numberOfGuesses === 2) {
           console.log(`\n O \n/|\\\n\n`)
-          console.log(`You have ${numberOfGuesses} guesses left.\n`)
+          console.log(`You have ${numberOfGuesses} guesses left.`)
         } else if (numberOfGuesses === 1) {
           console.log(`\n O \n/|\\\n/\n`)
-          console.log(`You have ${numberOfGuesses} guesses left.\n`)
+          console.log(`You have ${numberOfGuesses} guesses left.`)
         } else if (numberOfGuesses === 0) {
           console.log(`\n O \n/|\\\n/ \\\n`)
-          console.log(`You have ${numberOfGuesses} guesses left.\n`)
+          console.log(`You have ${numberOfGuesses} guesses left.`)
         };
-        alreadyGuessedLetters.push(guess[0]);
-      };
+        console.log(`You have guessed ${alreadyGuessedLetters}.\n`);
     };
 
     const showResults = () => {
       if (numberOfRemainingLetters > 0) {
         console.log(hiddenWordArray.join(" "));
-        console.log(`\nSorry, you are out of guesses.\nThe answer was ${word}.\n`)
+        console.log(`\n\nSorry, you are out of guesses.\nThe answer was ${word}.\n`)
         losses++;
       } else {
         console.log(hiddenWordArray.join(" "));
-        console.log(`\nGood job!\nThe answer was ${word}.\n`)  
+        console.log(`\n\nGood job!\nThe answer was ${word}.\n`)  
         wins++;
       };
-      console.log(`You have won ${wins} round(s) and have lost ${losses} round(s).`)
+      console.log(`\nYou have won ${wins} round(s) and have lost ${losses} round(s).\n`)
     };
     
     showResults();
