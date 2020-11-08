@@ -23,13 +23,13 @@ You will need to have the [readline-sync](https://www.npmjs.com/package/readline
 
 1. To install the read-line sync library, type this into your terminal:
 
-...`npm install --save readline-sync`
+   `npm install --save readline-sync`
 
 2. To obtain a copy of the game, clone this repository by typing this into your terminal:
 
-...`git clone https://github.com/KatieBullock/hangman`
+   `git clone https://github.com/KatieBullock/hangman`
 
-...Make sure you are inside of that directory when you are ready to play the game in your terminal.
+   Make sure you are inside of that directory when you are ready to play the game in your terminal.
 
 ## Playing the Game
 
@@ -42,4 +42,4 @@ To start the game, run `node .`. To end the game, press `ctrl + c`. The game wil
 
 ## Acknowledgements
 
-  -Thank you to Matina Patsos and Jamal Taylor with Albany Can Code for guidance and support on this project.
+  - Thank you to Matina Patsos and Jamal Taylor with Albany Can Code for guidance and support on this project.
