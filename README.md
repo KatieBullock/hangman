@@ -17,19 +17,49 @@ These instructions will get a copy of the project up and running on your local m
 
 ### Prerequisites
 
-You will need to have the [readline-sync](https://www.npmjs.com/package/readline-sync) library installed.
+Node.js is a JavaScript runtime engine. You will need to have the latest stable version of Node installed. If you already have Node.js installed, type `node -v` in your terminal. If you do not have Node installed, take a look at the next section to see how to install it.
+
+You will also need to have the [readline-sync](https://www.npmjs.com/package/readline-sync) library installed.
 
 ### Installing
 
-1. To install the read-line sync library, type this into your terminal:
+#### For Mac
+
+1. In order to install Node.js, we recommend using Homebrew. [Homebrew](https://brew.sh/) is a package manager for Mac, meaning that it will help make installing and managing a lot of command line software easier.
+
+   If you already have Homebrew installed or if you are not sure whether you have it installed, type `brew -v` in your terminal. Update Homebrew with `brew update` and then skip ahead to the next step. If you get a command not found error, you will need to install Homebrew.
+
+   To install Homebrew, type this into your terminal:
+
+   `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+
+2. To install Node.js, type this into your terminal:
+
+   `brew install node`
+
+3. To install the read-line sync library, type this into your terminal:
 
    `npm install --save readline-sync`
 
-2. To obtain a copy of the game, clone this repository by typing this into your terminal:
+4. To obtain a copy of the game, clone this repository by typing this into your terminal:
 
    `git clone https://github.com/KatieBullock/hangman`
 
    Make sure you are inside of that directory when you are ready to play the game in your terminal.
+   
+#### For Windows
+
+1. To install Node.js, go to [https://nodejs.org/en/](https://nodejs.org/en/) and click on the current version.
+   
+2. To install the read-line sync library, type this into your Git Bash:
+
+   `npm install --save readline-sync`
+
+3. To obtain a copy of the game, clone this repository by typing this into your Git Bash:
+
+   `git clone https://github.com/KatieBullock/hangman`
+
+   Make sure you are inside of that directory when you are ready to play the game in your Git Bash.
 
 ## Playing the Game
 
@@ -37,7 +67,7 @@ To start the game, run `node .`. To end the game, press `ctrl + c`. The game wil
 
 ## Authors
 
-  - **Kathryn Bullock** - *Developed Game* -
+  - **Katie Bullock** - *Developed Game* -
     [KatieBullock](https://github.com/KatieBullock)
 
 ## Acknowledgments
