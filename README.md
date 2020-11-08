@@ -40,6 +40,6 @@ To start the game, run `node .`. To end the game, press `ctrl + c`. The game wil
   - **Kathryn Bullock** - *Developed Game* -
     [KatieBullock](https://github.com/KatieBullock)
 
-## Acknowledgements
+## Acknowledgments
 
   - Thank you to Matina Patsos and Jamal Taylor with Albany Can Code for guidance and support on this project.
