@@ -6,11 +6,11 @@ In this Node.js game, the player has to guess the correct word before making six
 
 ## Summary
 
-  - [Getting Started](#getting-started)
-  - [Playing the Game](#playing-the-game)
-  - [Authors](#authors)
-  - [Acknowledgments](#acknowledgments)
-  
+- [Getting Started](#getting-started)
+- [Playing the Game](#playing-the-game)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
+
 ## Getting Started
 
 These instructions will get a copy of the project up and running on your local machine.
@@ -25,9 +25,9 @@ You will also need to have the [readline-sync](https://www.npmjs.com/package/rea
 
 #### For Mac
 
-1. In order to install Node.js, we recommend using Homebrew. [Homebrew](https://brew.sh/) is a package manager for Mac, meaning that it will help make installing and managing a lot of command line software easier.
+1. In order to install Node.js, we recommend using Homebrew. [Homebrew](https://brew.sh/) is a package manager for Mac.
 
-   If you already have Homebrew installed or if you are not sure whether you have it installed, type `brew -v` in your terminal. Update Homebrew with `brew update` and then skip ahead to the next step. If you get a command not found error, you will need to install Homebrew.
+   If you already have Homebrew installed, type `brew -v` in your terminal. Update Homebrew with `brew update` and then skip ahead to the next step.
 
    To install Homebrew, type this into your terminal:
 
@@ -45,12 +45,12 @@ You will also need to have the [readline-sync](https://www.npmjs.com/package/rea
 
    `git clone https://github.com/KatieBullock/hangman`
 
-   Make sure you are inside of that directory when you are ready to play the game in your terminal.
-   
+   Make sure you are inside of that directory when you are ready to play the game.
+
 #### For Windows
 
-1. To install Node.js, go to [https://nodejs.org/en/](https://nodejs.org/en/) and click on the current version.
-   
+1. To install Node.js, go to [https://nodejs.org/en/](https://nodejs.org/en/) and click on the current version. Follow the provided steps to finish installation.
+
 2. To install the read-line sync library, type this into your Git Bash:
 
    `npm install --save readline-sync`
@@ -59,17 +59,17 @@ You will also need to have the [readline-sync](https://www.npmjs.com/package/rea
 
    `git clone https://github.com/KatieBullock/hangman`
 
-   Make sure you are inside of that directory when you are ready to play the game in your Git Bash.
+   Make sure you are inside of that directory when you are ready to play the game.
 
 ## Playing the Game
 
-To start the game, run `node .`. To end the game, press `ctrl + c`. The game will prompt you to guess a letter. Type in any letter. If it is a correct guess, you will see the letter fill a position in the hidden word. If it is an incorrect guess, you will add a body part to your hangman. Each incorrect guess will subtract a guess from your 6 guesses. Numbers, special characters, and duplicate guesses will not affect your remaining guesses. At the end of the round, you will see your results and how many rounds you have won and lost. A new game will begin automatically. The game will keep going until you press `ctrl + c`.
+Run `node .` to start the game. To end the game, press `ctrl + c`. The game will prompt you to guess a letter. Type in any letter. If it is a correct guess, you will see the letter fill a position in the hidden word. If it is an incorrect guess, you will add a body part to your hangman. Each incorrect guess will subtract a guess from your 6 guesses. Numbers, special characters, and duplicate guesses will not affect your remaining guesses. At the end of the round, you will see your results and how many rounds you have won and lost. A new game will begin automatically. The game will keep going until you press `ctrl + c`.
 
 ## Authors
 
-  - **Katie Bullock** - *Developed Game* -
-    [KatieBullock](https://github.com/KatieBullock)
+- **Katie Bullock** - _Developed Game_ -
+  [KatieBullock](https://github.com/KatieBullock)
 
 ## Acknowledgments
 
-  - Thank you to Matina Patsos and Jamal Taylor with Albany Can Code for guidance and support on this project.
+- Thank you to Matina Patsos and Jamal Taylor with Albany Can Code for guidance and support on this project.
