@@ -28,26 +28,33 @@ const resetGame = () => {
     while (numberOfRemainingLetters > 0 && numberOfGuesses > 0) {
       console.log(hiddenWordArray.join(" "));
       let guess = prompt.question("\nPlease guess a letter: ").toLowerCase();
-      if (guess === "") {
-        console.log("\nPlease enter a letter.")
-      } else if (/[^a-zA-Z]/.test(guess[0])) {
-        console.log("\nPlease enter a letter.")
-      } else if (/[a-zA-Z]/.test(guess[0])) {
-        letters.forEach((letter, index) => {
-          if (guess[0] === letter) {
-            if (hiddenWordArray[index] === "_") {
-              hiddenWordArray[index] = guess[0];
-              numberOfRemainingLetters--;
+      
+      const evaluateGuess = () => {
+        if (guess === "") {
+          console.log("\nPlease enter a letter.")
+        } else if (/[^a-zA-Z]/.test(guess[0])) {
+          console.log("\nPlease enter a letter.")
+        } else if (/[a-zA-Z]/.test(guess[0])) {
+          letters.forEach((letter, index) => {
+            if (guess[0] === letter) {
+              if (hiddenWordArray[index] === "_") {
+                hiddenWordArray[index] = guess[0];
+                numberOfRemainingLetters--;
+              };
             };
+          });
+          if (!alreadyGuessedLetters.includes(guess[0]) && !letters.includes(guess[0])) {
+            numberOfGuesses--
           };
-        });
-        if (!alreadyGuessedLetters.includes(guess[0]) && !letters.includes(guess[0])) {
-          numberOfGuesses--
-        };
-        if (!alreadyGuessedLetters.includes(guess[0])) {
-          alreadyGuessedLetters.push(guess[0]);
+          if (!alreadyGuessedLetters.includes(guess[0])) {
+            alreadyGuessedLetters.push(guess[0]);
+          };
         };
       };
+
+      evaluateGuess();
+
+      const drawHangman = () => {
         if (numberOfGuesses === 6) {
           console.log(`\nYou have ${numberOfGuesses} guesses left.`)
         } else if (numberOfGuesses === 5) {
@@ -70,6 +77,10 @@ const resetGame = () => {
           console.log(`You have ${numberOfGuesses} guesses left.`)
         };
         console.log(`You have guessed ${alreadyGuessedLetters}.\n`);
+      };
+
+      drawHangman();
+    
     };
 
     const showResults = () => {
@@ -86,9 +97,11 @@ const resetGame = () => {
     };
     
     showResults();
+  
   };
   
   hangman();
+
 };
 
 while(true) {
